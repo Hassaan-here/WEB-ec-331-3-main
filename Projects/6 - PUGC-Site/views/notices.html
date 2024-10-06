@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUGC</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/fontawesome.css" />
+     <link rel="icon" href="../assets/img/android-chrome-192x192.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+    <!-- preloader Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- preloader End -->
+
+ <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNavbar">
+    <div class="container">
+      <a href="../index.php" class="navbar-brand">
+        <img
+          src="../assets/img/android-chrome-512x512.png"
+          width="60px"
+          height="60px"
+          alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Regular navbar for larger screens -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ms-auto text-uppercase">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle fw-semibold"
+              id="newsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+              <li><a class="dropdown-item" href="#">Latest News</a></li>
+              <li><a class="dropdown-item" href="#">Job Announcements</a></li>
+              <li><a class="dropdown-item" href="#">Examination</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle fw-semibold"
+              id="departmentsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Departments
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+              <li><a class="dropdown-item" href="./departments/bbf.html">Banking & Finance</a></li>
+              <li>
+                <a class="dropdown-item" href="./departments/bba.html">Business Administration</a>
+              </li>
+              <li><a class="dropdown-item" href="./departments/commerce.html">Commerce</a></li>
+              <li>
+                <a class="dropdown-item" href="./departments/english.html">English Language & Lit.</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./departments/it.html">Information Technology</a>
+              </li>
+              <li><a class="dropdown-item" href="./departments/law.html">Law</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="./events.html" class="nav-link fw-semibold">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link fw-semibold">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Downloads</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Notice Board</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Societies</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Admissions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Offcanvas menu for small screens -->
+  <div
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="offcanvasNavbar"
+    aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <a href="../index.php" class="offcanvas-title" id="offcanvasNavbarLabel"></a>
+      <img
+        class="bg-transparent"
+        src="../assets/img/android-chrome-192x192.png"
+        width="60px"
+        height="60px"
+        alt="" />
+      </a>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-grow-1 text-uppercase">
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle fw-semibold"
+            id="offcanvasNewsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            News
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="offcanvasNewsDropdown">
+            <li><a class="dropdown-item" href="#">Latest News</a></li>
+            <li><a class="dropdown-item" href="#">Job Announcements</a></li>
+            <li><a class="dropdown-item" href="#">Examination</a></li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle fw-semibold"
+            id="departmentsDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Departments
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+            <li><a class="dropdown-item" href="./departments/bbf.html">Banking & Finance</a></li>
+            <li>
+              <a class="dropdown-item" href="./departments/bba.html">Business Administration</a>
+            </li>
+            <li><a class="dropdown-item" href="./departments/commerce.html">Commerce</a></li>
+            <li>
+              <a class="dropdown-item" href="./departments/english.html">English Language & Lit.</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./departments/it.html">Information Technology</a>
+            </li>
+            <li><a class="dropdown-item" href="./departments/law.html">Law</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./events.html" class="nav-link fw-semibold">Events</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link fw-semibold">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.php" class="nav-link fw-semibold">About us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link fw-semibold">Downloads</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link fw-semibold">Notice Board</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link fw-semibold">Societies</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link fw-semibold">Admissions</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+    <!-- Main Section Start -->
+<main>
+  <!-- Banner Section -->
+  <section class="text-center bg-light mt-5 py-5">
+    <div class="container">
+      <h1 class="mb-3">University Notices</h1>
+      <p>Stay updated with the latest announcements, events, and important information from our university.</p>
+    </div>
+  </section>
+
+  <!-- Notices Overview Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Latest Notices</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="notice-item mb-4 border p-3 rounded">
+            <div class="d-flex justify-content-between">
+              <h5>Notice Title 1</h5>
+              <span class="text-muted">October 10, 2024</span>
+            </div>
+            <p>This is a brief description of the notice. It contains essential details regarding the announcement.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+
+          <div class="notice-item mb-4 border p-3 rounded">
+            <div class="d-flex justify-content-between">
+              <h5>Notice Title 2</h5>
+              <span class="text-muted">October 5, 2024</span>
+            </div>
+            <p>Important update regarding the upcoming semester exams. Please check the schedule for details.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+
+          <div class="notice-item mb-4 border p-3 rounded">
+            <div class="d-flex justify-content-between">
+              <h5>Notice Title 3</h5>
+              <span class="text-muted">September 30, 2024</span>
+            </div>
+            <p>Join us for the university open day. Explore programs, meet faculty, and discover campus life.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+
+          <div class="notice-item mb-4 border p-3 rounded">
+            <div class="d-flex justify-content-between">
+              <h5>Notice Title 4</h5>
+              <span class="text-muted">September 25, 2024</span>
+            </div>
+            <p>Scholarship applications are now open. Click for more information on eligibility and application procedures.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+    <!-- Main Section End -->
+
+  <!-- Footer start  -->
+  <footer class="py-5 text-bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Academics</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Programs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Admissions</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Scholarships</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./about.php" class="nav-link p-0 text-light">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Research</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Projects</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Publications</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Collaborations</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Funding</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="./events.html" class="nav-link p-0 text-light">Events</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Campus Life</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Clubs & Societies</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Sports</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Health & Wellness</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Housing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Dining</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5 class="text-light">Subscribe to our Newsletter</h5>
+            <p class="text-light">
+              Stay updated with the latest news and events from our
+              university.
+            </p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input
+                id="newsletter1"
+                type="text"
+                class="form-control"
+                placeholder="Email address" />
+              <button
+                class="btn btn-dark btn-outline-light py-2 fw-bold"
+                type="button">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p class="text-light">
+          &copy; 2024 University of the Punjab, Gujranwala. All rights
+          reserved.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="link-body-emphasis text-light" href="#">
+              <svg class="bi" width="24" height="24" fill="currentColor">
+                <path
+                  d="M23.643 4.937a10.004 10.004 0 01-2.828.775 4.92 4.92 0 002.165-2.724 9.933 9.933 0 01-3.127 1.195 4.93 4.93 0 00-8.394 4.482A13.975 13.975 0 011.64 3.15a4.93 4.93 0 001.523 6.573 4.898 4.898 0 01-2.224-.616v.061a4.93 4.93 0 003.946 4.826 4.935 4.935 0 01-2.21.084 4.93 4.93 0 004.601 3.417A9.867 9.867 0 010 19.54a13.93 13.93 0 007.548 2.209c9.055 0 14.008-7.493 14.008-13.986 0-.213-.005-.426-.014-.637A10.014 10.014 0 0023.643 4.937z" />
+              </svg>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-body-emphasis text-light" href="#">
+              <svg class="bi" width="24" height="24" fill="currentColor">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 5.09 3.8 9.28 8.74 9.88V15.89h-2.63V12h2.63V9.64c0-2.5 1.48-3.88 3.73-3.88 1.08 0 2.19.2 2.19.2v2.41h-1.23c-1.2 0-1.57.75-1.57 1.53V12h2.66l-.43 3.89h-2.23V21.88C18.2 21.28 22 17.09 22 12c0-5.52-4.48-10-10-10z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

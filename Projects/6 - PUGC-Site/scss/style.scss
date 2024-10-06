@@ -1,0 +1,119 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+// navbar
+#mainNavbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+}
+
+// hero Section
+.hero {
+  background-image: url("../assets/img/bg/campus-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+.overlay-home {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+// hr
+.custom-hr {
+  border: none;
+  height: 3px;
+  background-color: #007bff;
+  margin: 0px auto 20px 0px;
+}
+// team
+.instructor-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+// Events Cards
+
+.card-hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+// Departments
+.course-banner {
+  position: relative;
+  background: url("../assets/img/bg/campus-bg.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.course-banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+.course-banner p {
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.course-details h3 {
+  font-weight: bold;
+}
+.course-info {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.course-info h5 {
+  font-weight: bold;
+}
+.nav-tabs .nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+.course-card {
+  transition: transform 0.2s;
+}
+.course-card:hover {
+  transform: scale(1.05);
+}
+// Departments
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");

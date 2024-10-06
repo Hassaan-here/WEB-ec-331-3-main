@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUGC</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" href="../../css/fontawesome.css" />
+    <link rel="icon" href="../../assets/img/android-chrome-192x192.png" />
+  </head>
+  <body>
+    <!-- preloader Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- preloader End -->
+
+   <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNavbar">
+      <div class="container">
+        <a href="../../index.php" class="navbar-brand">
+          <img
+            src="../../assets/img/android-chrome-512x512.png"
+            width="60px"
+            height="60px"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Regular navbar for larger screens -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto text-uppercase">
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle fw-semibold"
+                id="newsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                News
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                <li><a class="dropdown-item" href="#">Latest News</a></li>
+                <li><a class="dropdown-item" href="#">Job Announcements</a></li>
+                <li><a class="dropdown-item" href="#">Examination</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                href=""
+                class="nav-link dropdown-toggle fw-semibold"
+                id="departmentsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Departments
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                <li><a class="dropdown-item" href="bbf.html">Banking & Finance</a></li>
+                <li>
+                  <a class="dropdown-item" href="bba.html">Business Administration</a>
+                </li>
+                <li><a class="dropdown-item" href="commerce.html">Commerce</a></li>
+                <li>
+                  <a class="dropdown-item" href="english.html">English Language & Lit.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="it.html">Information Technology</a>
+                </li>
+                <li><a class="dropdown-item" href="law.html">Law</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="../events.html" class="nav-link fw-semibold">Events</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link fw-semibold">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="../about.php" class="nav-link fw-semibold">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link fw-semibold">Downloads</a>
+            </li>
+            <li class="nav-item">
+              <a href="../notices.html" class="nav-link fw-semibold">Notice Board</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link fw-semibold">Societies</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link fw-semibold">Admissions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Offcanvas menu for small screens -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+          <a href="index.html" class="offcanvas-title" id="offcanvasNavbarLabel"></a>
+          <img
+          class="bg-transparent"
+            src="./assets/img/android-chrome-512x512.png"
+            width="60px"
+            height="60px"
+            alt=""
+          />
+        </a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-grow-1 text-uppercase">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle fw-semibold"
+              id="offcanvasNewsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              News
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasNewsDropdown">
+              <li><a class="dropdown-item" href="#">Latest News</a></li>
+              <li><a class="dropdown-item" href="#">Job Announcements</a></li>
+              <li><a class="dropdown-item" href="#">Examination</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+              <a
+                href=""
+                class="nav-link dropdown-toggle fw-semibold"
+                id="departmentsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Departments
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                <li><a class="dropdown-item" href="bbf.html">Banking & Finance</a></li>
+                <li>
+                  <a class="dropdown-item" href="bba.html">Business Administration</a>
+                </li>
+                <li><a class="dropdown-item" href="commerce.html">Commerce</a></li>
+                <li>
+                  <a class="dropdown-item" href="english.html">English Language & Lit.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="it.html">Information Technology</a>
+                </li>
+                <li><a class="dropdown-item" href="law.html">Law</a></li>
+              </ul>
+            </li>
+
+          <li class="nav-item">
+            <a href="../events.html" class="nav-link fw-semibold">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.php" class="nav-link fw-semibold">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Downloads</a>
+          </li>
+          <li class="nav-item">
+            <a href="../notices.html" class="nav-link fw-semibold">Notice Board</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Societies</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fw-semibold">Admissions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+<main>
+  <!-- Banner Section -->
+  <section class="course-banner text-center">
+    <div class="overlay"></div> <!-- Overlay Section -->
+    <div class="container">
+      <h1>Department of Business Administration</h1>
+      <p>Unlock leadership potential and business acumen with our comprehensive Business Administration programs designed for future executives and entrepreneurs.</p>
+    </div>
+  </section>
+
+  <!-- Course Overview Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Courses Offered</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="course-details mb-5">
+            <img src="../../assets/img/courses/banking.jpg" class="img-fluid mb-4" alt="Course Image" />
+            <h3>Bachelor of Business Administration (BBA)</h3>
+            <p>The BBA program provides a strong foundation in business management, covering areas such as leadership, finance, and operations management.</p>
+          </div>
+
+          <div class="course-details mb-5">
+            <img src="../../assets/img/courses/commerce.jpg" class="img-fluid mb-4" alt="Course Image" />
+            <h3>Master of Business Administration (MBA)</h3>
+            <p>The MBA program is tailored for professionals seeking advanced knowledge in strategic management and leadership to excel in a corporate environment.</p>
+          </div>
+        </div>
+
+        <!-- Course Info Sidebar -->
+        <div class="col-lg-4">
+          <div class="course-info mb-4">
+            <h5>Head of Department</h5>
+            <p>Dr. Sarah Johnson</p>
+          </div>
+          <div class="course-info mb-4">
+            <h5>Course Fee</h5>
+            <p>$2000 per semester</p>
+          </div>
+          <div class="course-info mb-4">
+            <h5>Seats Available</h5>
+            <p>120</p>
+          </div>
+          <div class="course-info mb-4">
+            <h5>Class Schedule</h5>
+            <p>Morning & Weekend Sessions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Tabs Section -->
+  <section class="py-5">
+    <div class="container">
+      <ul class="nav nav-tabs" id="courseTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="eligibility-tab" data-bs-toggle="tab" href="#eligibility" role="tab">Eligibility</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="admission-tab" data-bs-toggle="tab" href="#admission" role="tab">Admission Criteria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="curriculum-tab" data-bs-toggle="tab" href="#curriculum" role="tab">Curriculum</a>
+        </li>
+      </ul>
+
+      <div class="tab-content py-4" id="courseTabContent">
+        <div class="tab-pane fade show active" id="eligibility" role="tabpanel">
+          <h3>Eligibility</h3>
+          <p>Minimum qualification of F.Sc., A-Level, or equivalent with a minimum of 55% marks.</p>
+        </div>
+        <div class="tab-pane fade" id="admission" role="tabpanel">
+          <h3>Admission Criteria</h3>
+          <p>Admission is based on merit, considering entry test scores and previous academic achievements.</p>
+        </div>
+        <div class="tab-pane fade" id="curriculum" role="tabpanel">
+          <h3>Curriculum</h3>
+          <p>The program consists of 8 semesters (BBA) or 4 semesters (MBA), with courses in strategic management, finance, marketing, and entrepreneurship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Related Courses Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Explore Other Courses</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card course-card mb-4 h-100">
+          <img src="../../assets/img/courses/banking.jpg" class="card-img-top" alt="Related Course">
+          <div class="card-body">
+            <h5 class="card-title">Diploma in Accounting</h5>
+            <p class="card-text">A program designed to equip students with practical accounting skills and knowledge.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card course-card mb-4 h-100">
+          <img src="../../assets/img/courses/business.jpg" class="card-img-top" alt="Related Course">
+          <div class="card-body">
+            <h5 class="card-title">Diploma in Marketing</h5>
+            <p class="card-text">Explore marketing strategies and principles to prepare for a career in business marketing.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card course-card mb-4 h-100">
+          <img src="../../assets/img/courses/commerce.jpg" class="card-img-top" alt="Related Course">
+          <div class="card-body">
+            <h5 class="card-title">Master of Business Administration (MBA)</h5>
+            <p class="card-text">Advanced study in business management, focusing on leadership and organizational skills.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+  <!-- Footer start  -->
+  <footer class="py-5 text-bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Academics</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Programs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Admissions</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Scholarships</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="../about.php" class="nav-link p-0 text-light">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Research</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Projects</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Publications</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Collaborations</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Funding</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="../events.html" class="nav-link p-0 text-light">Events</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="text-light">Campus Life</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Clubs & Societies</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Sports</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Health & Wellness</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Housing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-light">Dining</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5 class="text-light">Subscribe to our Newsletter</h5>
+            <p class="text-light">
+              Stay updated with the latest news and events from our
+              university.
+            </p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input
+                id="newsletter1"
+                type="text"
+                class="form-control"
+                placeholder="Email address" />
+              <button
+                class="btn btn-dark btn-outline-light py-2 fw-bold"
+                type="button">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p class="text-light">
+          &copy; 2024 University of the Punjab, Gujranwala. All rights
+          reserved.
+        </p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="link-body-emphasis text-light" href="#">
+              <svg class="bi" width="24" height="24" fill="currentColor">
+                <path
+                  d="M23.643 4.937a10.004 10.004 0 01-2.828.775 4.92 4.92 0 002.165-2.724 9.933 9.933 0 01-3.127 1.195 4.93 4.93 0 00-8.394 4.482A13.975 13.975 0 011.64 3.15a4.93 4.93 0 001.523 6.573 4.898 4.898 0 01-2.224-.616v.061a4.93 4.93 0 003.946 4.826 4.935 4.935 0 01-2.21.084 4.93 4.93 0 004.601 3.417A9.867 9.867 0 010 19.54a13.93 13.93 0 007.548 2.209c9.055 0 14.008-7.493 14.008-13.986 0-.213-.005-.426-.014-.637A10.014 10.014 0 0023.643 4.937z" />
+              </svg>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-body-emphasis text-light" href="#">
+              <svg class="bi" width="24" height="24" fill="currentColor">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12c0 5.09 3.8 9.28 8.74 9.88V15.89h-2.63V12h2.63V9.64c0-2.5 1.48-3.88 3.73-3.88 1.08 0 2.19.2 2.19.2v2.41h-1.23c-1.2 0-1.57.75-1.57 1.53V12h2.66l-.43 3.89h-2.23V21.88C18.2 21.28 22 17.09 22 12c0-5.52-4.48-10-10-10z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/script.js"></script>
+  </body>
+</html>
